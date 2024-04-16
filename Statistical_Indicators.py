@@ -30,12 +30,12 @@ def statistical_indicators(predictions, actual):
     metrics = np.array([nrmse, nmbe, rmse, mbe, mae, mpe, mape, u95, rrmse, t_stats, ermax, mare, mabe, r2])
     normalized_metrics = (metrics - np.min(metrics)) / (np.max(metrics) - np.min(metrics))
 
-    # Calculate GPI
+    # Calculate Global Performance Indicator (GPI)
     weights = np.ones_like(metrics)
     weights[-1] = -1 
     gpi = np.sum(weights * normalized_metrics)
 
-    # Prepare results
+    # Results
     data = {
         'NRMSE (%)': [nrmse],
         'R2': [r2],
@@ -51,10 +51,9 @@ def statistical_indicators(predictions, actual):
         'ERMAX': [ermax],
         'MARE': [mare],
         'MABE': [mabe],
-        'GPI': [gpi]  # Added GPI
+        'GPI': [gpi] 
     }
 
-    # Create DataFrame from dictionary
     result_df = pd.DataFrame(data)
 
     return result_df
