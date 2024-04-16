@@ -32,7 +32,7 @@ def statistical_indicators(predictions, actual):
 
     # Calculate GPI
     weights = np.ones_like(metrics)
-    weights[-1] = -1  # Assuming the last metric is R2 and needs to be inversely weighted
+    weights[-1] = -1 
     gpi = np.sum(weights * normalized_metrics)
 
     # Prepare results
