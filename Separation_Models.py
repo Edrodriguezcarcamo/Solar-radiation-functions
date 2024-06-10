@@ -15,7 +15,7 @@ defined as follow,
 
 df['Clearness_index'] = Clearness index
 df['Daily_KT'] = Daily clearness index 
-df['AST'] = AST 
+df['AST'] = Apparent Solar Time  
 df['Solar_altitud'] = Solar altitud
 df['Persistence'] = Persistence
 df['k_tc'] = Difference between clearness index of clear-sky GHI and clearness index
