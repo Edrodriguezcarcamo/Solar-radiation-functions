@@ -30,7 +30,7 @@ def statistical_indicators(predictions, actual):
     metrics = np.array([nrmse, nmbe, rmse, mbe, mae, mpe, mape, u95, rrmse, t_stats, ermax, mare, mabe, r2])
     normalized_metrics = (metrics - np.min(metrics)) / (np.max(metrics) - np.min(metrics))
 
-    # Calculate Global Performance Indicator (GPI)
+    # Calculate Global Performance Indicator (GPI) url: https://onlinelibrary.wiley.com/doi/abs/10.1002/ep.14122
     weights = np.ones_like(metrics)
     weights[-1] = -1 
     gpi = np.sum(weights * normalized_metrics)
