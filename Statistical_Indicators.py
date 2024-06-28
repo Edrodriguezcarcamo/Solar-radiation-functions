@@ -73,7 +73,7 @@ def statistical_indicators(predictions, actual):
     # Calculate KSI and OVER
     ksi, over = calculate_ksi_over(actual, predictions)
     
-    # Calculate CPI url: https://doi.org/10.1016/j.rser.2014.07.117
+    # Calculate the Combined Performance Index (CPI) url: https://doi.org/10.1016/j.rser.2014.07.117
     cpi = (ksi + over + 2 * nrmse) / 4
 
     # Prepare results
