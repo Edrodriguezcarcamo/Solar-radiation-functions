@@ -72,9 +72,9 @@ def statistical_indicators(predictions, actual):
 
     # Calculate KSI and OVER
     ksi, over = calculate_ksi_over(actual, predictions)
-
+    
     # Calculate CPI url: https://doi.org/10.1016/j.rser.2014.07.117
-    cpi = (ksi + over + 2 * rmse) / 4
+    cpi = (ksi + over + 2 * nrmse) / 4
 
     # Prepare results
     data = {
@@ -93,8 +93,8 @@ def statistical_indicators(predictions, actual):
         'MARE': [mare],
         'MABE': [mabe],
         'GPI': [gpi],
-        'KSI': [ksi],
-        'OVER': [over],
+        'KSI (%)': [ksi],
+        'OVER (%)': [over],
         'CPI': [cpi]
     }
 
@@ -102,6 +102,3 @@ def statistical_indicators(predictions, actual):
     result_df = pd.DataFrame(data)
 
     return result_df
-
-
-
