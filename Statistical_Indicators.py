@@ -168,10 +168,11 @@ def statistical_indicators(predictions, actual, model_names=None, nbins=1000):
         df['GPI'] = np.nan
 
     # -----------------------------
-    # reorder columns as requested
+    # reorder columns
     ordered_cols = [
         'NRMSE (%)', 'R2', 'NMBE (%)', 'RMSE', 'MBE', 'MAE', 'MPE (%)',
         'MAPE (%)', 'U95', 'RRMSE', 'T-Stats', 'ERMAX', 'MARE', 'MABE',
         'GPI', 'KSI (%)', 'OVER (%)', 'CPI'
     ]
     return df[ordered_cols]
+
