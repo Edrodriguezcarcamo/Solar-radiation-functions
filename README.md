@@ -1,3 +1,3 @@
-# Functions
+# Separation Models
 
-Different functions used in the context of separation models for solar radiation
+Different models used in the context of estimating the components of solar radiation
