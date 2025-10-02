@@ -1,3 +1,3 @@
-# Separation Models
+# Solar Radiation Functions
 
-Different models used in the context of estimating the components of solar radiation
+Functions implementing different models for estimating solar radiation components, along with statistical metrics for evaluating model accuracy. 
